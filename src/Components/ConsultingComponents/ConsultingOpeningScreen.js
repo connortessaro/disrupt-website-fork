@@ -5,6 +5,11 @@ import hamburgerIcon from "../../img/hamburgerIcon.svg";
 import arrowDown from "../../img/arrowDown.svg";
 import { NavLink } from "react-router-dom";
 
+
+function scrollDown() {
+  window.scrollTo(0, document.body.scrollHeight)
+}
+
 export default function PastVenturesOpeningScreen({
   hamburgerMenuOpen,
   toggleHamburgerMenu,
@@ -49,7 +54,7 @@ export default function PastVenturesOpeningScreen({
 
       {/* Arrow Down Button */}
       <div className="mt-12 flex justify-center sm:justify-end mr-0 sm:mr-16">
-        <button>
+        <button onClick={scrollDown}>
           <img src={arrowDown} alt="Scroll Down" className="w-8 h-8 sm:w-10 sm:h-10" />
         </button>
       </div>
