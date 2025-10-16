@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PastVenturesOpeningScreen from "./PastVenturesComponents/PastVenturesOpeningScreen";
 import PastVenturesExamples from "./PastVenturesComponents/PastVenturesExamples";
 import Footer from "./HomeComponents/Footer";
+import Header from "../Header";
 
 export default function PastVentures() {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -21,14 +22,15 @@ export default function PastVentures() {
     return () => {
       document.body.style.overflow = "auto";
     };
-  });
+  }, [hamburgerMenuOpen]);
 
   return (
-    <div>
-      <PastVenturesOpeningScreen
+    <div class>
+      <Header
         hamburgerMenuOpen={hamburgerMenuOpen}
         toggleHamburgerMenu={toggleHamburgerMenu}
       />
+      <PastVenturesOpeningScreen />
       <PastVenturesExamples />
       <Footer />
     </div>

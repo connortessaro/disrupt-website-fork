@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import disruptLogoBlack from "../img/logo_black.svg";
 import disruptLogoOrig from "../img/logo_a.svg"
 import hamburgerIcon from "../img/hamburgerIcon.svg";
 import "./HamburgerMenuStyles.css";
