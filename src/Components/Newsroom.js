@@ -3,6 +3,7 @@ import Footer from "./HomeComponents/Footer";
 import NewsroomLanding from "./NewsroomComponents/NewsroomLanding";
 import FeaturedNews from "./NewsroomComponents/FeaturedNews";
 import Newsletters from "./NewsroomComponents/Newsletters";
+import Header from "../Header";
 
 export default function Newsroom() {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -25,10 +26,11 @@ export default function Newsroom() {
 
   return (
     <div>
-      <NewsroomLanding
+      <Header
         hamburgerMenuOpen={hamburgerMenuOpen}
         toggleHamburgerMenu={toggleHamburgerMenu}
       />
+      <NewsroomLanding />
       <FeaturedNews />
       <Newsletters />
       <Footer />

@@ -8,6 +8,7 @@ import Events from "./Components/Events";
 import Newsroom from "./Components/Newsroom";
 import * as React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 // Delete bg-black to show background video example
 // If they do a video, they should try to have the opening scene be the ending scene (Disrupt logo over a black backdrop?)
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="w-full bg-black">
       <BrowserRouter>
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

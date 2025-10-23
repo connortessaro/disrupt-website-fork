@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import EventsLanding from "./EventsComponents/EventsLanding";
 import Calendar from "./EventsComponents/Calendar";
 import Footer from "./HomeComponents/Footer";
+import Header from "../Header";
 
 export default function Events() {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -25,10 +26,11 @@ export default function Events() {
 
   return (
     <div className="flex flex-col h-full">
-      <EventsLanding
+      <Header
         toggleHamburgerMenu={toggleHamburgerMenu}
         hamburgerMenuOpen={hamburgerMenuOpen}
       />
+      <EventsLanding />
       <div className="flex-grow">
         <Calendar />
       </div>
